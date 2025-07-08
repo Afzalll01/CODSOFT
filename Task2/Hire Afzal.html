@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hire Afzal</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #e0a3c8;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    main {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    section {
+      padding: 30px;
+    }
+
+    h2, h3 {
+      color: #0078D4;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    a {
+      color: #0078D4;
+      text-decoration: none;
+    }
+
+    .contact-links p {
+      margin: 10px 0;
+    }
+
+    .note {
+      font-size: 0.9em;
+      color: #555;
+      margin-top: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>👋 I'm Afzal</h1>
+    <p> Aspiring Web Developer | Let's build something awesome together</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>💼 What I Do</h2>
+      <ul>
+        <li>✅ Frontend development (HTML, CSS, JavaScript)</li>
+        <li>✅ VS Code &amp; Live Server troubleshooting</li>
+        <li>✅ Custom calculators &amp; interactive tools</li>
+        <li>✅ Tech support &amp; bug fixing</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>📬 Contact Me</h3>
+      <div class="contact-links">
+        <p>📧 <a href="mailto:afzal92239@gmail.com">Send me an email</a></p>
+        <p>💬 <a href="https://wa.me/919131712347" target="_blank">Chat on WhatsApp</a></p>
+      </div>
+      <p class="note">⏱️ I usually reply within 24 hours. Looking forward to hearing from you!</p>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Afzal. All rights reserved.
+  </footer>
+
+
+<script>
+
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+</script>
+
+</body></html>
